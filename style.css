@@ -7,7 +7,15 @@
     background:linear-gradient(#323259,#323259) !important;
     box-shadow: 0px 5px 20px #1f233b;
 }
-
+.card {
+    margin-top: 1.5em;
+}
+.onSwitch {
+    position: absolute;
+    left: 65%;
+    top: 20%;
+    font-size: large;
+}
 .navbar .fa {
     /* width: 3em;
     height: 3em; */
@@ -49,9 +57,6 @@
     padding: .9em;
 
 }
-.card-body {
-    text-align: justify !important;
-}
 #sidebar .blocks div a {
     text-decoration: none;
 }
@@ -72,15 +77,10 @@ margin: 0 0 0 2.5em ;
     margin-left: 15em;
     position: absolute;
     top:5em;
-    padding: .3em;
-    width: 84.79vw;
+    padding: 1em;
+    width: 84vw;
 }
-.card {
-    text-align: left !important;
-}
-.container-fluid .row {
-    margin:3em 0;
-}
+
 .mainArticle span  {
     font-size: 20px;
     text-align: left;
@@ -94,4 +94,21 @@ margin: 0 0 0 2.5em ;
 .mainArticle .far {
     font-size: 40px;
     
+}
+
+
+
+
+
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+}
+footer .card {
+    
+    background: #323259;
 }
