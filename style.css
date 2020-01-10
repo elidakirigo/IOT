@@ -71,7 +71,7 @@ margin: 0 0 0 2.5em ;
     background: #404075;
 }
 /* main section */
-.mainArticle {
+.mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article {
     margin: 0 auto;
     padding: 0 auto;
     margin-left: 15em;
@@ -79,6 +79,7 @@ margin: 0 0 0 2.5em ;
     top:5em;
     padding: 1em;
     width: 84vw;
+    display:block;
 }
 
 .mainArticle span  {
@@ -95,12 +96,6 @@ margin: 0 0 0 2.5em ;
     font-size: 40px;
     
 }
-
-
-
-
-
-
 
 footer {
     position: absolute;

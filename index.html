@@ -37,21 +37,21 @@
       <section id="sidebar">
         <div class="one"><span><i class="fa fa-home" aria-hidden="true"></i> IOT dashboard</span></div>
         <div class="blocks">
-          <div>
-            <a href="#">
+          <div  class="section1">
+            <a href="#" class="active" id="layout" onclick="changeDisplay(mainArticle)">
               <i class="fa fa-database a" aria-hidden="true"></i>
               IOT layout
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
             </a>
           </div>
-          <div>
+          <div class="section" id="doors" onclick="changeDisplay(secondArticle)">
             <a href="#">
               <i class="fas fa-blog a" aria-hidden="true"></i>
               doors
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
             </a>
           </div>
-          <div>
+          <div class="section" id="info" onclick="changeDisplay(thirdArticle)">
             
             <a href="#">
               <i class="fas fa-book-open a" aria-hidden="true"></i>
@@ -60,14 +60,7 @@
             </a>
            
           </div>
-          <div>
-             <a href="#">
-            <i class="fa fa-star a" aria-hidden="true"></i>
-            status
-            <i class="fa fa-caret-left b" aria-hidden="true"></i>
-          </a>
-          </div>
-          <div>
+          <div class="section" id="wireless" onclick="changeDisplay(fourthArticle)">
              <a href="#">
               <i class="fa fa-wifi a" aria-hidden="true"></i> 
               wireless
@@ -76,9 +69,6 @@
              </a>
 
           </div>
-          
-         
-         
         </div>
 
       </section>
@@ -132,6 +122,69 @@
             <div class="col-md-7">
               <div class="card">
                 <div class="card-body">
+                  <button type="button" onmouseover="clicked()" class="btn btn-outline-info" id="calendar1">calendar</button><br><br>
+                  
+                  <p class="card-text" style="font-size: 10em; font-family: Georgia, 'Times New Roman', Times, serif;" id="date_status"></p>
+                  <p class="card-text" id="time_status"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">my playlist</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </main>
+
+      <main class="second-Article">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <span><i class="far fa-lightbulb"></i>entrance</span>
+                  <h6 class="onSwitch">ON</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <span><i class="far fa-lightbulb"></i>light</span>
+                  <h6 class="onSwitch">ON</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <span><i class="far fa-lightbulb"></i>light</span>
+                  <h6 class="onSwitch">ON</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>light</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="container-fliud">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-body">
                   <h5 class="card-title">room management</h5>
                   <p class="card-text">Content</p>
                 </div>
@@ -147,50 +200,112 @@
             </div>
           </div>
         </div>
+      </main>
 
-        <!-- container part three... this is the third part of the home page -->
-
+      <main class="third-Article">
         <div class="container-fliud">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">room temperature</h5>
+                  <h5 class="card-title">d management</h5>
                   <p class="card-text">Content</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Title</h5>
+                  <h5 class="card-title">my playlist</h5>
                   <p class="card-text">Content</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
-        
+        <div class="container-fliud">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">room management</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">my playlist</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main class="fourth-Article">
+        <div class="container-fliud">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">room management</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">my playlist</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fliud">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">room management</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">my playlist</h5>
+                  <p class="card-text">Content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
+      
       <!-- the footer -->
-        <footer>
+        <!-- <footer>
           <div class="container-fliud">
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <p ><i class="fa fa-copyright" aria-hidden="true"></i>2019 </p>
+                    <p ><i class="fa fa-copyright" aria-hidden="true"></i>2020</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </footer>
+        </footer> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <script src="main.js"></script>
   </body>
 </html>
