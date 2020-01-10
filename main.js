@@ -13,7 +13,9 @@ const   mainArticle = document.querySelector('.mainArticle'),
         calendar = document.querySelector('#calendar'),
         html_time = document.querySelector('#time_status'),
         html_date = document.querySelector('#date_status'),
-        calendar1 = document.querySelector('#calendar1');
+        calendar1 = document.querySelector('#calendar1'),
+        relay_one = document.querySelector('#relay-first');
+
 
 
 var time_values;        
@@ -54,3 +56,28 @@ getTime(time)
 function clicked(){
     calendar1.innerText= "DAY";
 }
+
+
+// DOORS
+
+function dashboard(selected,collors){
+
+    var d,r,e,r,t,f;
+
+    selected.style.background = 'darkblue';
+    d= selected.children;
+    r=d[0].children;
+    console.log(r);
+    
+
+}
+
+// clicked
+
+
+
+// notifications
+
+$(document).ready(function () {
+    
+});

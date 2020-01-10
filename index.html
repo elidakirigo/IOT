@@ -37,8 +37,8 @@
       <section id="sidebar">
         <div class="one"><span><i class="fa fa-home" aria-hidden="true"></i> IOT dashboard</span></div>
         <div class="blocks">
-          <div  class="section1">
-            <a href="#" class="active" id="layout" onclick="changeDisplay(mainArticle)">
+          <div  class="section1" id="layout">
+            <a href="#" class="active"  onclick="changeDisplay(mainArticle)">
               <i class="fa fa-database a" aria-hidden="true"></i>
               IOT layout
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
@@ -80,39 +80,32 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-3">
-              <div class="card">
+            <div class="col-md-4">
+              <div class="card" id="emergency">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>entrance</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-bullseye"></i>
+                   ALL EMERGENCY DOORS
+                  </span>
+                  <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card">
+            <div class="col-md-4">
+              <div class="card" id="front">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>light</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>ALL DOORS</span>
+                  <h6 class="onSwitch">CLOSED</h6>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card">
+            <div class="col-md-4">
+              <div class="card" id="opposite">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>light</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>ALL OPPOSITE DOORS</span>
+                  <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="card">
-                <div class="card-body">
-                  <h6 class="onSwitch">ON</h6>
-                  <span><i class="far fa-lightbulb"></i>light</span>
-                </div>
-              </div>
-            </div>
-            
           </div>
         </div>
 
@@ -131,9 +124,14 @@
             </div>
             <div class="col-md-5">
               <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
-                  <p class="card-text">Content</p>
+                <div class="card-body" style="color: #c5ccd3; font-family: cursive;">
+                  <h5 class="card-title">STATUS </h5>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door two opposite  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
                 </div>
               </div>
             </div>
@@ -145,56 +143,50 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">
-              <div class="card">
+              <div class="card" id="relay-first" onclick="dashboard(relay_one)">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>entrance</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>relay door one</span>
+                  <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card">
+              <div class="card" id="relay-second">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>light</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>relay opposite one</span>
+                  <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card">
+              <div class="card" id="relay-third">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>light</span>
-                  <h6 class="onSwitch">ON</h6>
+                  <span><i class="far fa-lightbulb"></i>relay door two</span>
+                  <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card">
+              <div class="card" id="relay-fourth">
                 <div class="card-body">
                   <h6 class="onSwitch">ON</h6>
-                  <span><i class="far fa-lightbulb"></i>light</span>
+                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
                 </div>
               </div>
             </div>
-            
-          </div>
-        </div>
-
-        <div class="container-fliud">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="card">
+            <div class="col-md-6">
+              <div class="card" id="relay-fifth">
                 <div class="card-body">
-                  <h5 class="card-title">room management</h5>
-                  <p class="card-text">Content</p>
+                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
+                  <h6 class="onSwitch">CLOSED</h6>
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="card">
+            <div class="col-md-6">
+              <div class="card" id="relay-sixth">
                 <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
-                  <p class="card-text">Content</p>
+                  <h6 class="onSwitch">CLOSED</h6>
+                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
                 </div>
               </div>
             </div>
@@ -205,38 +197,10 @@
       <main class="third-Article">
         <div class="container-fliud">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12n">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">d management</h5>
-                  <p class="card-text">Content</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
-                  <p class="card-text">Content</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-fliud">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">room management</h5>
-                  <p class="card-text">Content</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
                   <p class="card-text">Content</p>
                 </div>
               </div>
@@ -265,31 +229,11 @@
             </div>
           </div>
         </div>
-        <div class="container-fliud">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">room management</h5>
-                  <p class="card-text">Content</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
-                  <p class="card-text">Content</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
 
       
       <!-- the footer -->
-        <!-- <footer>
+      <footer>
           <div class="container-fliud">
             <div class="row">
               <div class="col-md-12">
@@ -301,7 +245,7 @@
               </div>
             </div>
           </div>
-        </footer> -->
+      </footer> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>

@@ -3,27 +3,26 @@
     padding: 0 auto;
 }
 
+/* navbar section of the dashboard */
+
 .navbar {
     background:linear-gradient(#323259,#323259) !important;
     box-shadow: 0px 5px 20px #1f233b;
 }
+
 .card {
     margin-top: 1.5em;
 }
-.onSwitch {
-    position: absolute;
-    left: 65%;
-    top: 20%;
-    font-size: large;
-}
+
 .navbar .fa {
-    /* width: 3em;
-    height: 3em; */
     font-size: 20px;
     color: #bcbcbc;
     padding: 0 .6em;
     border-left: 1px solid #0000007e;
 }
+
+/* sidebar section of the dashboard */
+
 #sidebar {
     background: #1f233b;
     height: 100vh;
@@ -39,6 +38,7 @@
     top: 8em;
 
 }
+
 #sidebar .one span i{
     margin-right: 10px;
 }
@@ -57,9 +57,11 @@
     padding: .9em;
 
 }
+
 #sidebar .blocks div a {
     text-decoration: none;
 }
+
 #sidebar .blocks div .a{
     margin: 0 .5em;
 }
@@ -67,10 +69,13 @@
 #sidebar .blocks div .b{
 margin: 0 0 0 2.5em ;
 }
+
 #sidebar li:hover {
     background: #404075;
 }
-/* main section */
+
+/* main section of the dashboard */
+
 .mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article {
     margin: 0 auto;
     padding: 0 auto;
@@ -78,31 +83,64 @@ margin: 0 0 0 2.5em ;
     position: absolute;
     top:5em;
     padding: 1em;
-    width: 84vw;
+    width: 85%;
     display:block;
 }
 
 .mainArticle span  {
-    font-size: 20px;
-    text-align: left;
+    font-size: 14px;
+    color: #bcbcbc;
 }
+
 .mainArticle span i {
-    background: linear-gradient(75deg,lavender,lavenderblush);
+    background: linear-gradient(120deg,#e4e4eb,#b4627d);
     padding: .4em .9em;
     border-radius: 4px;
-    margin-right: .7em;
+    margin:0  .7em .3em 0;
 }
+
 .mainArticle .far {
     font-size: 40px;
     
 }
 
+.onSwitch {
+    color: #bcbcbc;
+    text-align: right;
+}
+
+
+/* doors section of the css */
+
+#layout, #doors, #info, #wireless, #emergency, #opposite, #front,#relay-first, #relay-second,#relay-third, #relay-fourth,#relay-fifth, #relay-sixth {
+    cursor: pointer;
+}
+
+.second-Article span i {
+    background: linear-gradient(120deg,#e4e4eb,#b4627d);
+    padding: .4em .9em;
+    border-radius: 4px;
+    margin:0  .7em .3em 0;
+}
+
+.second-Article span  {
+    font-size: 14px;
+    color: #bcbcbc;
+}
+
+.second-Article .far {
+    font-size: 40px;
+    
+}
+
+/* the footer section of the dashboard */
+
 footer {
     position: absolute;
-    width: 100%;
-    z-index: -1;
     bottom: 0;
+    margin: 0 auto;
 }
+
 footer .card {
     
     background: #323259;
