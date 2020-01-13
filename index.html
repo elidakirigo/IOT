@@ -17,14 +17,13 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav navbar-left">
+      <div class="collapse navbar-left navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ">
           <li class="nav-item ">
             <a class="nav-link" href="#"><i class="fa fa-home a" aria-hidden="true"></i>home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-bell-o a" aria-hidden="true"></i> notification</a>
-          </li>
+            <a class="nav-link" href="#"><i class="fa fa-bell-o a" aria-hidden="true"></i> open<small style="background: wheat;color: black;font-weight: bolder; border-radius: 50%; padding: .2em .6em;margin-left: 3px;">1</small></a> </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fa fa-search a" aria-hidden="true"></i> </a>
           </li>
@@ -40,7 +39,7 @@
           <div  class="section1" id="layout">
             <a href="#" class="active"  onclick="changeDisplay(mainArticle)">
               <i class="fa fa-database a" aria-hidden="true"></i>
-              IOT layout
+                IOT layout
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
             </a>
           </div>
@@ -83,7 +82,7 @@
             <div class="col-md-4">
               <div class="card" id="emergency">
                 <div class="card-body">
-                  <span><i class="far fa-bullseye"></i>
+                  <span><i class="fas fa-bullseye"></i>
                    ALL EMERGENCY DOORS
                   </span>
                   <h6 class="onSwitch">OPEN</h6>
@@ -93,7 +92,7 @@
             <div class="col-md-4">
               <div class="card" id="front">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>ALL DOORS</span>
+                  <span><i class="fab fa-500px"></i>ALL DOORS</span>
                   <h6 class="onSwitch">CLOSED</h6>
                 </div>
               </div>
@@ -101,7 +100,7 @@
             <div class="col-md-4">
               <div class="card" id="opposite">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>ALL OPPOSITE DOORS</span>
+                  <span><i class="fab fa-accusoft"></i>ALL OPPOSITE DOORS</span>
                   <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
@@ -124,14 +123,9 @@
             </div>
             <div class="col-md-5">
               <div class="card">
-                <div class="card-body" style="color: #c5ccd3; font-family: cursive;">
-                  <h5 class="card-title">STATUS </h5>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door two opposite  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                <div class="card-body">
+                  <h5 class="card-title">visual representation</h5>
+                  <p class="card-text">Content</p>
                 </div>
               </div>
             </div>
@@ -145,8 +139,8 @@
             <div class="col-md-6">
               <div class="card" id="relay-first" onclick="dashboard(relay_one)">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>relay door one</span>
-                  <h6 class="onSwitch">OPEN</h6>
+                  <span><i class="fas fa-door-closed"></i>relay door one</span>
+                  <h6 class="onSwitch">CLOSED</h6>
                 </div>
               </div>
             </div>
@@ -161,7 +155,7 @@
             <div class="col-md-6">
               <div class="card" id="relay-third">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>relay door two</span>
+                  <span><i class="fas fa-dungeon"></i>relay door two</span>
                   <h6 class="onSwitch">OPEN</h6>
                 </div>
               </div>
@@ -170,14 +164,14 @@
               <div class="card" id="relay-fourth">
                 <div class="card-body">
                   <h6 class="onSwitch">ON</h6>
-                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
+                  <span><i class="fas fa-bacon"></i>relay opposite twoF</span>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card" id="relay-fifth">
                 <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
+                  <span><i class="fas fa-shoe-prints"></i>relay opposite twoF</span>
                   <h6 class="onSwitch">CLOSED</h6>
                 </div>
               </div>
@@ -186,7 +180,7 @@
               <div class="card" id="relay-sixth">
                 <div class="card-body">
                   <h6 class="onSwitch">CLOSED</h6>
-                  <span><i class="far fa-lightbulb"></i>relay opposite twoF</span>
+                  <span><i class="fas fa-dumbbell"></i>relay opposite twoF</span>
                 </div>
               </div>
             </div>
@@ -213,9 +207,14 @@
           <div class="row">
             <div class="col-md-7">
               <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">room management</h5>
-                  <p class="card-text">Content</p>
+                <div class="card-body" style="color: #c5ccd3; font-family: cursive;">
+                  <h5 class="card-title">STATUS </h5>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door two opposite  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
                 </div>
               </div>
             </div>
@@ -239,7 +238,7 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-body">
-                    <p ><i class="fa fa-copyright" aria-hidden="true"></i>2020</p>
+                    <p style='color: #c5ccd3;'><i class="fa fa-copyright" aria-hidden="true"></i>2020</p>
                   </div>
                 </div>
               </div>

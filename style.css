@@ -99,7 +99,7 @@ margin: 0 0 0 2.5em ;
     margin:0  .7em .3em 0;
 }
 
-.mainArticle .far {
+.mainArticle .far ,.mainArticle .fas, .mainArticle .fa , .mainArticle .fab{
     font-size: 40px;
     
 }
@@ -128,7 +128,7 @@ margin: 0 0 0 2.5em ;
     color: #bcbcbc;
 }
 
-.second-Article .far {
+.second-Article .far ,.second-Article .fas,.second-Article .fa{
     font-size: 40px;
     
 }
@@ -144,4 +144,20 @@ footer {
 footer .card {
     
     background: #323259;
+}
+
+@media (max-width: 800px) {
+    #sidebar,#sidebar .blocks {
+        width: 5em;
+    }
+    #sidebar .one {
+        display: none;
+    }
+    #sidebar .blocks div .a{
+        margin: 0 .5em;
+        display: none;
+    }
+    .mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article{
+        width: 70%;
+    }
 }

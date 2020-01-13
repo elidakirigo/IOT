@@ -1,5 +1,7 @@
 
 const   mainArticle = document.querySelector('.mainArticle'),
+        sidebar = document.querySelector('#sidebar'),
+        sectionAll = document.querySelectorAll('.section'),
         secondArticle = document.querySelector('.second-Article'),
         thirdArticle = document.querySelector('.third-Article'),
         fourthArticle = document.querySelector('.fourth-Article'),
@@ -79,5 +81,7 @@ function dashboard(selected,collors){
 // notifications
 
 $(document).ready(function () {
-    
+    $(sidebar).scrollLeft('3%');
 });
+
+// make the text disapear
