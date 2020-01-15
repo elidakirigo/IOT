@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'> 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>DASHBOARD</title>
   </head>
@@ -36,8 +37,8 @@
       <section id="sidebar">
         <div class="one"><span><i class="fa fa-home" aria-hidden="true"></i> IOT dashboard</span></div>
         <div class="blocks">
-          <div  class="section1" id="layout">
-            <a href="#" class="active"  onclick="changeDisplay(mainArticle)">
+          <div  class="section1" onclick="changeDisplay(mainArticle)" id="layout">
+            <a href="#" class="active"  >
               <i class="fa fa-database a" aria-hidden="true"></i>
                 IOT layout
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
@@ -72,6 +73,34 @@
 
       </section>
 
+      <section id="substitute_sidebar">
+        <div class="blocks">
+          <div  class="section1" id="layout" onclick="changeDisplay(mainArticle)">
+            <a href="#" class="active">
+              <i class="fa fa-database a" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="section" id="doors" onclick="changeDisplay(secondArticle)">
+            <a href="#">
+              <i class="fas fa-blog a" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="section" id="info" onclick="changeDisplay(thirdArticle)">
+            
+            <a href="#">
+              <i class="fas fa-book-open a" aria-hidden="true"></i>
+            </a>
+          
+          </div>
+          <div class="section" id="wireless" onclick="changeDisplay(fourthArticle)">
+            <a href="#">
+              <i class="fa fa-wifi a" aria-hidden="true"></i> 
+
+            </a>
+
+          </div>
+        </div>
+      </section>
       <!-- home page main code. -->
 
       <main class="mainArticle">
@@ -111,21 +140,27 @@
         <!-- container part two... this is the second part of the home page -->
         <div class="container-fliud">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6 col-xm-3">
               <div class="card">
                 <div class="card-body">
                   <button type="button" onmouseover="clicked()" class="btn btn-outline-info" id="calendar1">calendar</button><br><br>
                   
-                  <p class="card-text" style="font-size: 10em; font-family: Georgia, 'Times New Roman', Times, serif;" id="date_status"></p>
+                  <p class="card-text"  id="date_status"></p>
                   <p class="card-text" id="time_status"></p>
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">visual representation</h5>
-                  <p class="card-text">Content</p>
+                  <div id="chartContainer" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,7 +171,7 @@
       <main class="second-Article">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-2" >
               <div class="card" id="relay-first" onclick="dashboard(relay_one)">
                 <div class="card-body">
                   <span><i class="fas fa-door-closed"></i>relay door one</span>
@@ -250,5 +285,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <!-- <script src="index.js"></script> -->
   <script src="main.js"></script>
+
+ 
   </body>
 </html>

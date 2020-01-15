@@ -30,6 +30,10 @@
     width: 15em;
 }
 
+#substitute_sidebar {
+    display: none;
+}
+
 #sidebar .one {
     background: linear-gradient(green,#015001);
     padding: 10px;
@@ -109,7 +113,9 @@ margin: 0 0 0 2.5em ;
     text-align: right;
 }
 
-
+#date_status {
+    font-size: 7em; font-family: Georgia, 'Times New Roman', Times, serif;
+}
 /* doors section of the css */
 
 #layout, #doors, #info, #wireless, #emergency, #opposite, #front,#relay-first, #relay-second,#relay-third, #relay-fourth,#relay-fifth, #relay-sixth {
@@ -146,18 +152,52 @@ footer .card {
     background: #323259;
 }
 
-@media (max-width: 800px) {
-    #sidebar,#sidebar .blocks {
+@media (max-width: 1200px) {
+    #sidebar {
+        width: 5em;
+        display: none;
+    }
+    #substitute_sidebar {
+        display: block;
+        background: #1f233b;
+        height: 100vh;
+        position: absolute;
         width: 5em;
     }
-    #sidebar .one {
-        display: none;
+    #substitute_sidebar .blocks {
+        text-decoration: none;
+        width: 5em;
+        position: absolute;
+        top: 6em;
     }
-    #sidebar .blocks div .a{
-        margin: 0 .5em;
-        display: none;
+    
+    #substitute_sidebar .blocks div {
+        text-decoration: none;
+        font-size: 23px;
+        border-bottom:1px solid rgb(20, 20, 20);
+        padding: .9em;
+    
     }
-    .mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article{
-        width: 70%;
+    
+    #substitute_sidebar .blocks div a {
+        text-decoration: none;
     }
+    
+    #substitute_sidebar .blocks div .a{
+        padding: .2em;
+    }
+    
+    .mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article {
+        margin-left: 5em;
+        width: calc(100% - 5em);
+    }
+
+    #date_status  {
+        font-size: 5em;
+    }
+}
+
+#chartContainer span{
+    width: 80%;
+    background: yellow;
 }
