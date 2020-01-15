@@ -83,7 +83,7 @@ margin: 0 0 0 2.5em ;
     position: absolute;
     top:5em;
     padding: 1em;
-    width: 85%;
+    width: calc(100% - 15em);
     display:block;
 }
 
