@@ -90,3 +90,6 @@ $(document).ready(function () {
 });
 
 // the donut js
+clickHandler () {
+    
+}

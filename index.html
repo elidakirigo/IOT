@@ -8,11 +8,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'> 
+    <!-- <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'>  -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>DASHBOARD</title>
   </head>
   <body>
+      <div id="app" v-cloak>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">DASHBOARD</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +26,7 @@
             <a class="nav-link" href="#"><i class="fa fa-home a" aria-hidden="true"></i>home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-bell-o a" aria-hidden="true"></i> open<small style="background: wheat;color: black;font-weight: bolder; border-radius: 50%; padding: .2em .6em;margin-left: 3px;">1</small></a> </li>
+            <a class="nav-link" href="#"><i class="fa fa-bell-o a" aria-hidden="true"></i> no: open doors<small style="background: wheat;color: black;font-weight: bolder; border-radius: 50%; padding: .2em .6em;margin-left: 3px;">1</small></a> </li>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fa fa-search a" aria-hidden="true"></i> </a>
           </li>
@@ -65,7 +67,6 @@
               <i class="fa fa-wifi a" aria-hidden="true"></i> 
               wireless
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
-
              </a>
 
           </div>
@@ -108,29 +109,48 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4">
-              <div class="card" id="emergency">
-                <div class="card-body">
-                  <span><i class="fas fa-bullseye"></i>
-                   ALL EMERGENCY DOORS
-                  </span>
-                  <h6 class="onSwitch">OPEN</h6>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="emergency" v-on:click="increment">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-bullseye"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span style="text-align: center;">
+                      <h6>opened</h6>
+                      ALL EMERGENCY DOORS
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6">
               <div class="card" id="front">
-                <div class="card-body">
-                  <span><i class="fab fa-500px"></i>ALL DOORS</span>
-                  <h6 class="onSwitch">CLOSED</h6>
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fab fa-500px"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span style="text-align: center;">
+                      <h6>opened</h6>
+                      ALL <br>FRONT DOORS
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4  col-sm-12">
               <div class="card" id="opposite">
-                <div class="card-body">
-                  <span><i class="fab fa-accusoft"></i>ALL OPPOSITE DOORS</span>
-                  <h6 class="onSwitch">OPEN</h6>
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fab fa-accusoft"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>OPEN</h6>
+                      ALL FRONT DOORS
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +191,7 @@
       <main class="second-Article">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6 col-xs-2" >
+            <div class="col-md-6  col-sm-6" >
               <div class="card" id="relay-first" onclick="dashboard(relay_one)">
                 <div class="card-body">
                   <span><i class="fas fa-door-closed"></i>relay door one</span>
@@ -179,7 +199,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  col-sm-6">
               <div class="card" id="relay-second">
                 <div class="card-body">
                   <span><i class="far fa-lightbulb"></i>relay opposite one</span>
@@ -187,7 +207,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  col-sm-6">
               <div class="card" id="relay-third">
                 <div class="card-body">
                   <span><i class="fas fa-dungeon"></i>relay door two</span>
@@ -195,7 +215,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  col-sm-6">
               <div class="card" id="relay-fourth">
                 <div class="card-body">
                   <h6 class="onSwitch">ON</h6>
@@ -203,7 +223,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  col-sm-6">
               <div class="card" id="relay-fifth">
                 <div class="card-body">
                   <span><i class="fas fa-shoe-prints"></i>relay opposite twoF</span>
@@ -211,7 +231,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6  col-sm-6">
               <div class="card" id="relay-sixth">
                 <div class="card-body">
                   <h6 class="onSwitch">CLOSED</h6>
@@ -280,11 +300,17 @@
             </div>
           </div>
       </footer> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <!-- <script src="index.js"></script> -->
-  <script src="main.js"></script>
+      
+     </div>
+<!--  <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+      <script src="../uibuilder/vendor/vue/dist/vue.js"></script> 
+      <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
+      <script src="./uibuilderfe.min.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="index.js"></script>
+      <script src="main.js"></script>
 
  
   </body>

@@ -103,14 +103,24 @@ margin: 0 0 0 2.5em ;
     margin:0  .7em .3em 0;
 }
 
+#emergency , #front ,#opposite {
+    padding: .5em 1.5em;
+}
+.flow {
+    background: green;
+    color: #e4e4eb;
+    text-align: center;
+    padding: 1.3em;
+    border-radius: .3em;
+}
+
+.sec_flow {
+    padding: 1em;
+}
+
 .mainArticle .far ,.mainArticle .fas, .mainArticle .fa , .mainArticle .fab{
     font-size: 40px;
     
-}
-
-.onSwitch {
-    color: #bcbcbc;
-    text-align: right;
 }
 
 #date_status {
