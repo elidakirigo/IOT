@@ -8,62 +8,49 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-rCA2D+D9QXuP2TomtQwd+uP50EHjpafN+wruul0sXZzX/Da7Txn4tB9aLMZV4DZm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
-    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css'>  -->
+     <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>DASHBOARD</title>
   </head>
   <body>
-      <div id="app" v-cloak>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <!-- <div id="app" v-cloak> -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">DASHBOARD</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-left navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav ">
-          <li class="nav-item ">
-            <a class="nav-link" href="#"><i class="fa fa-home a" aria-hidden="true"></i>home</a>
-          </li>
+        <ul class="navbar-nav "></li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-bell-o a" aria-hidden="true"></i> no: open doors<small style="background: wheat;color: black;font-weight: bolder; border-radius: 50%; padding: .2em .6em;margin-left: 3px;">1</small></a> </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-search a" aria-hidden="true"></i> </a>
-          </li>
-          
+                <!-- NOTIFICATION TAB -->
+                <div class="alert alert-dismissible alert-success">
+                  a door has been opened
+                </div>
+            </li>
         </ul>
       </div>
-    </nav>
+        </nav>
 
       <!-- side bar -->
       <section id="sidebar">
         <div class="one"><span><i class="fa fa-home" aria-hidden="true"></i> IOT dashboard</span></div>
         <div class="blocks">
           <div  class="section1" onclick="changeDisplay(mainArticle)" id="layout">
-            <a href="#" class="active"  >
-              <i class="fa fa-database a" aria-hidden="true"></i>
+            <a  class="active"  >
+              <i class="fa fa-certificate a" aria-hidden="true"></i>
                 IOT layout
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
             </a>
           </div>
           <div class="section" id="doors" onclick="changeDisplay(secondArticle)">
-            <a href="#">
+            <a >
               <i class="fas fa-blog a" aria-hidden="true"></i>
               doors
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
             </a>
           </div>
-          <div class="section" id="info" onclick="changeDisplay(thirdArticle)">
-            
-            <a href="#">
-              <i class="fas fa-book-open a" aria-hidden="true"></i>
-              information
-              <i class="fa fa-caret-left b" aria-hidden="true"></i>
-            </a>
-           
-          </div>
           <div class="section" id="wireless" onclick="changeDisplay(fourthArticle)">
-             <a href="#">
+             <a >
               <i class="fa fa-wifi a" aria-hidden="true"></i> 
               wireless
               <i class="fa fa-caret-left b" aria-hidden="true"></i>
@@ -77,24 +64,17 @@
       <section id="substitute_sidebar">
         <div class="blocks">
           <div  class="section1" id="layout" onclick="changeDisplay(mainArticle)">
-            <a href="#" class="active">
-              <i class="fa fa-database a" aria-hidden="true"></i>
+            <a  class="active">
+              <i class="fa fa-certificate a" aria-hidden="true"></i>
             </a>
           </div>
           <div class="section" id="doors" onclick="changeDisplay(secondArticle)">
-            <a href="#">
+            <a>
               <i class="fas fa-blog a" aria-hidden="true"></i>
             </a>
           </div>
-          <div class="section" id="info" onclick="changeDisplay(thirdArticle)">
-            
-            <a href="#">
-              <i class="fas fa-book-open a" aria-hidden="true"></i>
-            </a>
-          
-          </div>
           <div class="section" id="wireless" onclick="changeDisplay(fourthArticle)">
-            <a href="#">
+            <a >
               <i class="fa fa-wifi a" aria-hidden="true"></i> 
 
             </a>
@@ -105,50 +85,51 @@
       <!-- home page main code. -->
 
       <main class="mainArticle">
+
         <!-- container part one... this is the first part of the home page -->
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4  col-sm-6">
-              <div class="card" id="emergency" v-on:click="increment">
+            <div class="col-md-4  col-sm-6 col-xs-1">
+              <div class="card" id="emergency" onclick="clickHandler('emergency','h6','flow', '#3f3a837e','#fff','#ffdfe4,#ff058a')">
                 <div class="row">
                   <div class="col-md-4 flow">
                     <i class="fas fa-bullseye"></i>   
                   </div>
                   <div class="col-md-8 sec_flow">
-                    <span style="text-align: center;">
-                      <h6>opened</h6>
-                      ALL EMERGENCY DOORS
+                    <span>
+                      <h6>closed</h6>
+                      ALL EMERGENCY DOORS 1
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="card" id="front">
+            <div class="col-md-4  col-sm-6 col-xs-4">
+              <div class="card" id="front" onclick="clickHandler('front','h6','flow', '#3f3a837e','#fff','#cfcfcf,#00003b')">
                 <div class="row">
                   <div class="col-md-4 flow">
                     <i class="fab fa-500px"></i>   
                   </div>
                   <div class="col-md-8 sec_flow">
-                    <span style="text-align: center;">
-                      <h6>opened</h6>
-                      ALL <br>FRONT DOORS
+                    <span>
+                      <h6>closed</h6>
+                      ALL EMERGENCY DOORS 2
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4  col-sm-12">
-              <div class="card" id="opposite">
+            <div class="col-md-4  col-sm-6 col-xs-4">
+              <div class="card" id="opposite" onclick="clickHandler('opposite','h6','flow', '#3f3a837e','#fff','#814e4e,#470404')">
                 <div class="row">
                   <div class="col-md-4 flow">
                     <i class="fab fa-accusoft"></i>   
                   </div>
                   <div class="col-md-8 sec_flow">
                     <span>
-                      <h6>OPEN</h6>
-                      ALL FRONT DOORS
+                      <h6>closed</h6>
+                      KEEP E. DOORS OPEN
                     </span>
                   </div>
                 </div>
@@ -160,7 +141,7 @@
         <!-- container part two... this is the second part of the home page -->
         <div class="container-fliud">
           <div class="row">
-            <div class="col-md-6 col-xm-3">
+            <div class="col-md-6 ">
               <div class="card">
                 <div class="card-body">
                   <button type="button" onmouseover="clicked()" class="btn btn-outline-info" id="calendar1">calendar</button><br><br>
@@ -172,16 +153,47 @@
             </div>
             <div class="col-md-6">
               <div class="card">
-                <div class="card-body">
-                  <div id="chartContainer" >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
+                <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">no:</th>
+                    <th scope="col">door</th>
+                    <th scope="col">status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-primary">
+                    <th scope="row">1</th>
+                    <td>ENTRANCE DOORS</td>
+                    <td id='relay-all-front'>{{ status.one}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>ENTRANCE DOORS 2</td>
+                    <td id='relay-all-opp'>{{ status.two}}</td>
+                  </tr>
+                  <tr class="table-active"> 
+                    <th scope="row">3</th>
+                    <td>SERVICE DOORS</td>
+                    <td id="relay-all-service">{{ status.three }}</td>
+                  </tr>
+                  <tr class="table-info">
+                    <th scope="row">4</th>
+                    <td id="service">BACK DOORS</td>
+                    <td>{{ status.four }}</td>
+                  </tr>
+                  <tr class="table-active">
+                    <th scope="row">5</th>
+                    <td>EMERGENCY DOOR 1</td>
+                    <td id="emergency">{{ status.five }}</td>
+                  </tr>
+                  <tr style="background: #1f233b;">
+                    <th scope="row">6</th>
+                    <td>EMERGENCY DOOR 2</td>
+                    <td id="front">{{ status.six }}</td>
+                  </tr>
+                </tbody>
+              </table> 
               </div>
             </div>
           </div>
@@ -191,125 +203,259 @@
       <main class="second-Article">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-6  col-sm-6" >
-              <div class="card" id="relay-first" onclick="dashboard(relay_one)">
-                <div class="card-body">
-                  <span><i class="fas fa-door-closed"></i>relay door one</span>
-                  <h6 class="onSwitch">CLOSED</h6>
+            <div class="col-md-4 col-sm-6">
+              <div class="card" id="relay-first" onclick="clickHandler('relay-first','h6','flow', '#3f3a837e','#fff','#faffb6,#d1ff06')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-door-closed"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ENTRANCE DOOR
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6  col-sm-6">
-              <div class="card" id="relay-second">
-                <div class="card-body">
-                  <span><i class="far fa-lightbulb"></i>relay opposite one</span>
-                  <h6 class="onSwitch">OPEN</h6>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-second" onclick="clickHandler('relay-second','h6','flow', '#3f3a837e','#fff','#b6e2ff,#06b8ff')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fa fa-heart"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ENTRANCE OPPOSITE DOOR
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6  col-sm-6">
-              <div class="card" id="relay-third">
-                <div class="card-body">
-                  <span><i class="fas fa-dungeon"></i>relay door two</span>
-                  <h6 class="onSwitch">OPEN</h6>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-all-front" onclick="clickHandler('relay-all-front','h6','flow', '#3f3a837e','#fff','#b6e2ff,#06b8ff','relay-all-front')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fa fa-magnet"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL ENTRANCE DOOR
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6  col-sm-6">
-              <div class="card" id="relay-fourth">
-                <div class="card-body">
-                  <h6 class="onSwitch">ON</h6>
-                  <span><i class="fas fa-bacon"></i>relay opposite twoF</span>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-third" onclick="clickHandler('relay-third','h6','flow', '#3f3a837e','#fff','#ffddb6,#ff8b06')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-bacon"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ENTRANCE DOOR 2
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6  col-sm-6">
-              <div class="card" id="relay-fifth">
-                <div class="card-body">
-                  <span><i class="fas fa-shoe-prints"></i>relay opposite twoF</span>
-                  <h6 class="onSwitch">CLOSED</h6>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-fourth" onclick="clickHandler('relay-fourth','h6','flow', '#3f3a837e','#fff','#ffb6b6,#ff0606')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-dungeon"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ENTRANCE DOOR 2 OPP
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6  col-sm-6">
-              <div class="card" id="relay-sixth">
-                <div class="card-body">
-                  <h6 class="onSwitch">CLOSED</h6>
-                  <span><i class="fas fa-dumbbell"></i>relay opposite twoF</span>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-all-opp" onclick="clickHandler('relay-all-opp','h6','flow', '#3f3a837e','#fff','#b6e2ff,#06b8ff')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="far fa-lightbulb"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL ENTRANCE DOOR 2
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-
-      <main class="third-Article">
-        <div class="container-fliud">
-          <div class="row">
-            <div class="col-md-12n">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">d management</h5>
-                  <p class="card-text">Content</p>
+            <div class="col-md-4 col-sm-6">
+              <div class="card" id="relay-fifth" onclick="clickHandler('relay-fifth','h6','flow', '#3f3a837e','#fff','#bcffb6,#06ff6e')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-shoe-prints"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      SERVICE DOOR
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-      <main class="fourth-Article">
-        <div class="container-fliud">
-          <div class="row">
-            <div class="col-md-7">
-              <div class="card">
-                <div class="card-body" style="color: #c5ccd3; font-family: cursive;">
-                  <h5 class="card-title">STATUS </h5>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door two opposite  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
-                  <p class="card-text">door one  : <small style="padding: 0 5em;">{{ open }}</small></p>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-sixth" onclick="clickHandler('relay-sixth','h6','flow', '#3f3a837e','#fff','#d6b6ff,#0655ff')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-dumbbell"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      SERVICE DOOR OPP
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">my playlist</h5>
-                  <p class="card-text">Content</p>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="relay-all-service" onclick="clickHandler('relay-all-service','h6','flow', '#3f3a837e','#fff','#b6e2ff,#06b8ff')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fa fa-check"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL service DOOR opp
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-
-      
-      <!-- the footer -->
-      <footer>
-          <div class="container-fliud">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <p style='color: #c5ccd3;'><i class="fa fa-copyright" aria-hidden="true"></i>2020</p>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="allemergency" onclick="clickHandler('allemergency','h6','flow', '#3f3a837e','#fff','#ffdfe4,#ff058a')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-bullseye"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                       BACK DOOR FRONT
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="all-opp" onclick="clickHandler('all-opp','h6','flow', '#3f3a837e','#fff','#ffdfe4,#ff058a')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fas fa-bullseye"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      BACK DOOR OPP
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="service" onclick="clickHandler('service','h6','flow', '#3f3a837e','#fff','#ffdfe4,#ff058a')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fa fa-gavel"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL BACK DOORS
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="emergency" onclick="clickHandler('emergency','h6','flow', '#3f3a837e','#fff','#ffdfe4,#ff058a')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fa fa-flag-o"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL EMERGENCY DOORS 1
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="front" onclick="clickHandler('front','h6','flow', '#3f3a837e','#fff','#cfcfcf,#00003b')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fab fa-500px"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      ALL EMERGENCY DOORS 2
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6">
+              <div class="card" id="opposite" onclick="clickHandler('opposite','h6','flow', '#3f3a837e','#fff','#814e4e,#470404')">
+                <div class="row">
+                  <div class="col-md-4 flow">
+                    <i class="fab fa-accusoft"></i>   
+                  </div>
+                  <div class="col-md-8 sec_flow">
+                    <span>
+                      <h6>closed</h6>
+                      KEEP E. DOORS OPEN
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-      </footer> 
+        </div>
+      </main>
       
-     </div>
-<!--  <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+      <!--next article -->
+      <main class="fourth-Article">
+        <div class="container-fliud">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">reserved rights</h5>
+                  <p class="card-text">copyright 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+     <!-- </div> -->
+      <!-- <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
       <script src="../uibuilder/vendor/vue/dist/vue.js"></script> 
       <script src="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.js"></script>
       <script src="./uibuilderfe.min.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <script src="index.js"></script>
+      <script src="index.js"></script> 
       <script src="main.js"></script>
 
  

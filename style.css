@@ -57,7 +57,7 @@
 #sidebar .blocks div {
     text-decoration: none;
     font-size: 16px;
-    border-bottom:1px solid rgb(20, 20, 20);
+    border-bottom:1px solid #141414;
     padding: .9em;
 
 }
@@ -78,6 +78,16 @@ margin: 0 0 0 2.5em ;
     background: #404075;
 }
 
+/* alert */
+
+.alert {
+    display: none;
+    padding: 2em;
+    position: absolute;
+    top: 92%;
+    color: #303030;
+    opacity: .8;
+}
 /* main section of the dashboard */
 
 .mainArticle, .second-Article, .third-Article,.fourth-Article, .fifth-Article {
@@ -97,18 +107,18 @@ margin: 0 0 0 2.5em ;
 }
 
 .mainArticle span i {
-    background: linear-gradient(120deg,#e4e4eb,#b4627d);
     padding: .4em .9em;
     border-radius: 4px;
     margin:0  .7em .3em 0;
 }
 
-#emergency , #front ,#opposite {
-    padding: .5em 1.5em;
+#emergency ,#service, #allemergency, #all-opp , #front ,#opposite ,#relay-first,#relay-second,#relay-third,#relay-fourth,#relay-fifth,#relay-sixth, #relay-all-front, #relay-all-opp , #relay-all-service{
+    background: #303030;
+    color: #bcbcbc;
 }
+
 .flow {
-    background: green;
-    color: #e4e4eb;
+    border: .1em dashed greenyellow;
     text-align: center;
     padding: 1.3em;
     border-radius: .3em;
@@ -124,12 +134,13 @@ margin: 0 0 0 2.5em ;
 }
 
 #date_status {
-    font-size: 7em; font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 9.2em; font-family: Georgia, 'Times New Roman', Times, serif;
 }
 /* doors section of the css */
 
-#layout, #doors, #info, #wireless, #emergency, #opposite, #front,#relay-first, #relay-second,#relay-third, #relay-fourth,#relay-fifth, #relay-sixth {
+#layout, #allemergency ,#service , #all-opp , #doors, #info, #wireless, #emergency, #opposite, #front,#relay-first, #relay-second,#relay-third, #relay-fourth,#relay-fifth, #relay-sixth ,#relay-all-front ,#relay-all-opp , #relay-all-service{
     cursor: pointer;
+    padding: .5em 1.5em;
 }
 
 .second-Article span i {
@@ -144,22 +155,9 @@ margin: 0 0 0 2.5em ;
     color: #bcbcbc;
 }
 
-.second-Article .far ,.second-Article .fas,.second-Article .fa{
+.second-Article .far ,.second-Article .fas,.second-Article .fa , .second-Article .fab{
     font-size: 40px;
     
-}
-
-/* the footer section of the dashboard */
-
-footer {
-    position: absolute;
-    bottom: 0;
-    margin: 0 auto;
-}
-
-footer .card {
-    
-    background: #323259;
 }
 
 @media (max-width: 1200px) {
@@ -203,11 +201,6 @@ footer .card {
     }
 
     #date_status  {
-        font-size: 5em;
+        font-size: 6.2em;
     }
-}
-
-#chartContainer span{
-    width: 80%;
-    background: yellow;
 }
